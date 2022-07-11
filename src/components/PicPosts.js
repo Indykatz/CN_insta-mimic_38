@@ -21,6 +21,20 @@ const PicPosts = ({ photos, setPhotos }) => {
   return (
     <div className="App">
       <Button onClick={(e) => fetchImages()}>Click Me!</Button>
+      {/* <button onClick={() => setCLick((prevClick) => !prevClick)}>
+        {click.toString()}
+      </button> */}
+      {/*  */}
+      {click ? (
+        <Button onClick={() => setCLick((prevClick) => !prevClick)}>
+          Logout
+        </Button>
+      ) : (
+        <Button onClick={() => setCLick((prevClick) => !prevClick)}>
+          Login
+        </Button>
+      )}
+
       {/*  */}
       {photos.map((item, index) => {
         return (
