@@ -1,4 +1,4 @@
-import { Footer, FooterLinkItem } from "../styles/Footer.styled";
+import { Footer, FooterLinkItem } from "../css/Footer.styled";
 import { Link } from "react-router-dom";
 
 const FooterBanner = ({ name, github }) => {

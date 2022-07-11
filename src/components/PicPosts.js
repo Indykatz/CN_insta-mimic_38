@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 // import "./App.css";
+import { PostedPic } from "../css/photos.styled";
 
 const PicPosts = ({ photos, setPhotos }) => {
-  //   const [photos, setPhotos] = useState([]);
+  //   const [photos, setPhotos] = useState([]); // goes in app.js
 
   const fetchImages = async () => {
     const response = await fetch("https://picsum.photos/v2/list");
@@ -20,7 +21,7 @@ const PicPosts = ({ photos, setPhotos }) => {
         return (
           <div>
             <h2>{item.author}</h2>
-            <img src={item.download_url} alt="Random Pic" />
+            <PostedPic src={item.download_url} alt="Random Pic" />
           </div>
         );
       })}

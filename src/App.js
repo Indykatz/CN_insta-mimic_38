@@ -1,19 +1,25 @@
-import { useState } from "react";
-import { TheApp, Content } from "./styles/App.styled";
+import { TheApp, Content } from "./css/App.styled";
 import HeaderBanner from "./components/Header";
-import PicPosts from "./components/PicPosts";
-// import FooterBannner from "./components/Footer";
-import "./App.css";
+import Navbar from "./components/Navbar";
+import FooterBanner from "./components/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Photos from "./pages/Photos";
 
 const App = () => {
-  const [photos, setPhotos] = useState([]);
   return (
     <TheApp>
       <HeaderBanner />
-      <Content>
-        <PicPosts setPhotos={setPhotos} photos={photos} />
-      </Content>
-      {/* <FooterBannner /> */}
+      <BrowserRouter>
+        <Navbar />
+        <Content>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Photos" element={<Photos />} />
+          </Routes>
+        </Content>
+        <FooterBanner />
+      </BrowserRouter>
     </TheApp>
   );
 };

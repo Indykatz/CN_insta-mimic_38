@@ -1,4 +1,4 @@
-import { Header, HeaderH1, HeaderH2 } from "../styles/Header.styled";
+import { Header, HeaderH1, HeaderH2 } from "../css/Header.styled";
 
 const HeaderBanner = () => {
   return (
