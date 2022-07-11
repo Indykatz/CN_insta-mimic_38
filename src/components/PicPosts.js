@@ -1,7 +1,7 @@
 // import { useEffect } from "react";
 import { useState } from "react";
 // import "./App.css";
-import { PostedPic, Button } from "../css/photos.styled";
+import { PostedPic, Button, Username } from "../css/photos.styled";
 
 const PicPosts = ({ photos, setPhotos }) => {
   //   const [photos, setPhotos] = useState([]); // goes in app.js
@@ -13,7 +13,7 @@ const PicPosts = ({ photos, setPhotos }) => {
     setPhotos(data);
   };
 
-  // does it in tim
+  //
   // useEffect(() => {
   //   fetchImages();
   // }); // }[],) - see andys code
@@ -21,9 +21,6 @@ const PicPosts = ({ photos, setPhotos }) => {
   return (
     <div className="App">
       <Button onClick={(e) => fetchImages()}>Click Me!</Button>
-      {/* <button onClick={() => setCLick((prevClick) => !prevClick)}>
-        {click.toString()}
-      </button> */}
       {/*  */}
       {click ? (
         <Button onClick={() => setCLick((prevClick) => !prevClick)}>
@@ -39,7 +36,7 @@ const PicPosts = ({ photos, setPhotos }) => {
       {photos.map((item, index) => {
         return (
           <div>
-            <h2>{item.author}</h2>
+            <Username>{item.author}</Username>
             <PostedPic src={item.download_url} alt="Random Pic" />
           </div>
         );
