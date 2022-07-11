@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
+import { useState } from "react";
 // import "./App.css";
-import { PostedPic } from "../css/photos.styled";
+import { PostedPic, Button } from "../css/photos.styled";
 
 const PicPosts = ({ photos, setPhotos }) => {
   //   const [photos, setPhotos] = useState([]); // goes in app.js
+  const [click, setCLick] = useState(false);
 
   const fetchImages = async () => {
     const response = await fetch("https://picsum.photos/v2/list");
@@ -11,12 +13,15 @@ const PicPosts = ({ photos, setPhotos }) => {
     setPhotos(data);
   };
 
-  useEffect(() => {
-    fetchImages();
-  }); // }[],) - see andys code
+  // does it in tim
+  // useEffect(() => {
+  //   fetchImages();
+  // }); // }[],) - see andys code
 
   return (
     <div className="App">
+      <Button onClick={(e) => fetchImages()}>Click Me!</Button>
+      {/*  */}
       {photos.map((item, index) => {
         return (
           <div>

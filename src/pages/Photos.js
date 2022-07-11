@@ -6,7 +6,7 @@ const Photos = () => {
   const [photos, setPhotos] = useState([]); // here its is
   return (
     <div>
-      <Description>Photos</Description>
+      <Description>Insta-mimic</Description>
       <PicPosts setPhotos={setPhotos} photos={photos} />
     </div>
   );
