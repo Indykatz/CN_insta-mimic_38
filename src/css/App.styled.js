@@ -8,7 +8,7 @@ export const TheApp = styled.div`
 export const Content = styled.div`
   /* padding: 10px; */
   text-align: center;
-  min-height: 500px;
+  min-height: 550px;
 `;
 
 export const Description = styled.div`
